@@ -37,7 +37,7 @@ body {
   background-color: #ffffff;
   position: relative;
 }
-.sign-up__header::after {
+.sign-up__title::after {
   width: 66px;
 }
 .popup__container {
@@ -114,7 +114,6 @@ body {
 }
 .header {
   position: relative;
-  max-width: 100vw;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
@@ -132,9 +131,7 @@ body {
   position: absolute;
 }
 .container {
-  display: flex;
   position: relative;
-  flex-direction: column;
   z-index: 1;
   box-sizing: border-box;
   margin-left: auto;
@@ -216,16 +213,13 @@ body {
 .page-container {
   margin-top: 64px;
 }
-.trend-header, .sign-up__header {
-  text-align: center;
-}
 .trend-title, .sign-up__tittle {
+  text-align: center;
   font-size: 1.3rem;
   font-family: OpenSans-Bold;
   text-transform: uppercase;
-  margin-bottom: 14px;
 }
-.trend-header::after, .sign-up__header::after {
+.trend-title::after, .sign-up__tittle::after   {
   content: '';
   display: block;
   position: relative;
@@ -234,13 +228,15 @@ body {
   box-sizing: border-box;
   border: 1px solid #b59f5b;
   height: 3px;
+  margin-top: 14px;
   background-color: #b59f5b;
 }
 .trend-container {
   position: relative;
   display: flex;
   margin-top: 26px;
-
+  box-sizing: border-box;
+  justify-content: space-between;
 }
 .trend-content {
   position: relative;
@@ -273,13 +269,14 @@ body {
   background-image: url("../images/trend4.jpg");
 }
 .trend-content-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   position: relative;
   z-index: 1;
   box-sizing: border-box;
   border: 4px solid rgba(181, 159, 91, 0.6);
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
 }
 .trend-categories {
   display: flex;
@@ -315,7 +312,7 @@ body {
 .content-container {
   display: flex;
   padding-top: 64px;
-  width: 72.2vw;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -323,36 +320,35 @@ body {
   width: 64%;
   box-sizing: border-box;
 }
-.section {
+.main-content {
   margin-top: 4rem;
   display: flex;
 }
-.section:first-child {
+.main-content:first-child {
   margin-top: 0px;
 }
-
-.section-header {
+.content-header {
   text-transform: uppercase;
   font-family: OpenSans-Bold;
 }
-.section-categories {
+.content-categories {
   display: flex;
   list-style: none;
   padding-left: 0px;
   margin-top: 0px;
 }
-.section-category {
+.content-category {
   margin-right: 1.26rem;
   font-size: 0.93rem;
 }
-.section-category-link {
+.content-category-link {
   color: #b59f5b;
   text-decoration: none;
 }
-.section-category:last-child {
+.content-category:last-child {
   margin-right: 0px;
 }
-.section-title {
+.content-title {
   font-size: 1.33rem;
   line-height: 1.2em;
 }
@@ -366,16 +362,16 @@ body {
 .article {
   box-sizing: border-box;
 }
-.last-section-date {
+.last-content-date {
   font-size: 0.8rem;
   color: #888888;
   margin-right: 1.16em;
 }
-.section-author {
+.content-author {
   font-family: OpenSans-Bold;
   font-size: 0.8rem;
 }
-.section-description {
+.content-description {
   margin-top: 2.53em;
   font-size: 1rem;
   line-height: 1.4em;
@@ -388,10 +384,14 @@ body {
   margin-top: 0px;
   width: 100%;
 }
-.sidebar-header {
+.sidebar-title {
+  margin-top: 0px;
+  text-transform: uppercase;
+  font-size: 0.93rem;
+  font-family: OpenSans-Bold;
   text-align: center;
 }
-.sidebar-header::after {
+.sidebar-title::after {
   content: '';
   display: block;
   position: relative;
@@ -402,13 +402,7 @@ body {
   border: 1px solid #b59f5b;
   height: 3px;
   background-color: #b59f5b;
-}
-.sidebar-title {
-  margin-top: 0px;
-  margin-bottom: 0.92em;
-  text-transform: uppercase;
-  font-size: 0.93rem;
-  font-family: OpenSans-Bold;
+  margin-top: 0.92em;
 }
 .last-post-content {
   display: flex;
@@ -463,7 +457,7 @@ body {
   background-color: #b59f5b;
   background-image: url('../svg/search.svg');
   background-repeat: no-repeat;
-  background-size: 1.2rem;
+  background-size: 1.1rem;
   background-position: center center;
 }
 .subscription-section {
@@ -545,23 +539,20 @@ body {
   color: #b59f5b;
 }
 .shop-section {
-  width: 72.2vw;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 4.26rem;
 }
-.shop-header {
-  text-align: center;
-}
 .shop-title {
   font-size: 1.3rem;
   font-family: OpenSans-Bold;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  text-align: center;
 }
-.shop-header::after {
+.shop-title::after {
   content: '';
   display: block;
   position: relative;
@@ -572,16 +563,18 @@ body {
   height: 3px;
   background-color: #b59f5b;
   width: 4rem;
+  margin-top: 14px;
 } 
 .products {
   display: flex;
-  width: 72.2vw;
+  width: 1200px;
   justify-content: space-between;
-  align-content: center;
 }
 .product {
   width: 29.1%;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
 }
 .product_imgbox {
   position: relative;
@@ -600,8 +593,8 @@ body {
   width: 100%;
   box-sizing: border-box;
   padding: 1.66rem 1.53rem;
+  flex-grow: 1;
 }
-
 .product_content {
   margin-bottom: 1.8rem;
 }
@@ -651,10 +644,13 @@ body {
   text-transform: uppercase;
   font-family: OpenSans-Bold;
   font-size: 14px;
+}
+.button_link {
   color: #fff;
+  text-decoration: none;
 }
 .footer {
-  width: 72.2vw;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -730,7 +726,7 @@ body {
   .sign-up__title {
     font-size: 2rem;
   }
-  .sign-up__header::after {
+  .sign-up__title::after {
     width: 7.5rem;
   }
   .sign-up {
@@ -762,7 +758,7 @@ body {
     padding-bottom: 27.25rem;
   }
   .container {
-    width: 92%;
+    width: 330px;
     padding-right: 0px;
     padding-left: 7.5%;  
   }
@@ -773,7 +769,7 @@ body {
     align-self: flex-end;
   }
   .header-logo {
-    width: 78vw;
+    width: 281px;
     margin-right: 23px;
   }
   .menu__button {
@@ -785,11 +781,11 @@ body {
   .header-title {
     font-size: 3.25rem;
     line-height: 4.5rem;
-    min-width: 78vw;
-    max-width: 78vw;
+    min-width: 281px;
+    max-width: 281px;
     margin-right: 23px;
   }
-  .trend-header::after {
+  .trend-title::after {
     width: 8rem;
   }
   .trend-title {
@@ -817,42 +813,42 @@ body {
     line-height: 1.25em;
   }
   .content-container {
-    width: 91.6%;
+    width: 330px;
     flex-direction: column;
     padding-top: 44px;
   }
   .main {
     width: 100%;
   }
-  .section {
+  .main-content {
     flex-direction: column;
     border-bottom: 4px solid #eeeeee;
   }
-  .section:last-child {
-  margin-bottom: 44px;
+  .main-content:last-child {
+    margin-bottom: 44px;
   }
-  .section-img {
+  .content-img {
     width: 100%; 
   }
-  .section-categories {
+  .content-categories {
     margin-top: 2rem;
   }
-  .section-category {
+  .content-category {
     font-size: 1.75rem;
     margin-right: 21px;
   }
-  .section-title {
+  .content-title {
     font-size: 2rem;
     line-height: 1.25em;
   }
-  .last-section-date {
+  .last-content-date {
     font-size: 1.5rem;
     margin-right: 0.8em;
   }
-  .section-author {
+  .content-author {
     font-size: 1.5rem;
   }
-  .section-description {
+  .content-description {
     margin-top: 3rem;
     font-size: 1.75rem;
     line-height: 2.5rem;
@@ -923,13 +919,13 @@ body {
     fon-size: 1.5rem;
   }
   .shop-section {
-    width: 83.3vw;
+    width: 330px;
     margin-bottom: 5.375rem;
   }
   .shop-title {
     font-size: 2rem;
   }
-  .shop-header::after {
+  .shop-title::after {
     width: 7.5rem;
   } 
   .products {
@@ -969,7 +965,7 @@ body {
     width: 17rem;
   }
   .footer {
-    width: 83.3vw;
+    width: 330px;
   }
   .socials-item {
     margin-right: 4rem;
@@ -983,7 +979,7 @@ body {
     padding-bottom: 125px;
   }
   .container {
-    width: 91vw;
+    width: 728px;
   }
   .header-logo {
     width: 21vw;
@@ -1001,7 +997,7 @@ body {
   .trend-title {
    font-size: 1.2rem;
   }
-  .trend-header::after {
+  .trend-title::after {
     width: 8.72vw;
   }
   .trend-container {
@@ -1032,7 +1028,7 @@ body {
     line-height: 1.29em;
   }
   .content-container {
-    width: 94.8%;
+    width: 728px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1041,28 +1037,28 @@ body {
     box-sizing: border-box;
     margin-right: 4.4vw;
   }
-  .section {
+  .main-content {
     margin-top: 3.333rem;
     flex-direction: column;
     border-bottom: 4px solid #eeeeee;
   }
-  .section:last-child {
+  .main-content:last-child {
     border: none;
   }
-  .section-categories {
+  .content-categories {
     margin-top: 1rem;
   }
-  .section-category {
+  .content-category {
     margin-right: 1.2rem;
   }
-  .section-title {
+  .content-title {
     font-size: 1.13rem;
     line-height: 1.29em;
   }
-  .last-section-date {
+  .last-content-date {
     margin-right: 1.08em;
   }
-  .section-description {
+  .content-description {
     margin-top: 2.26em;
   }
   .sidebar {
@@ -1120,14 +1116,12 @@ body {
   .field-label {
     font-size: 0.86rem;
   }
-  .field {
-    font-size: 13px;
-    margin-top: 0.66rem;
-  }
   .textarea {
     padding-top: 1.46rem;
     min-height: 8.8rem;
     max-height: 8.8rem;
+    font-size: 13px;
+    margin-top: 0.66rem;
   }
   .header {
     background-image: url("../images/banner-bg.jpg");
@@ -1135,7 +1129,7 @@ body {
     padding-bottom: 144px;
   }    
   .container {
-    width: 72%;
+    width: 1200px;
     padding-right: 15px;
     padding-left: 15px;
   }
@@ -1143,13 +1137,13 @@ body {
     display: none;
   }
   .header-title {
-    font-size: 3rem;
-    min-width: 45vw;
-    max-width: 45vw;
+    font-size: 44px;
+    min-width: 681px;
+    max-width: 681px;
     line-height: 1.6em;
     margin: 8.5rem auto 0px;
   }
-  .trend-header::after {
+  .trend-title::after {
     width: 3.9rem;
   }
   .trend-title {
@@ -1157,12 +1151,12 @@ body {
     font-size: 1.3rem;
   }
   .trend-content {
-    width: 24%;
+    width: 23.8%;
     margin-right: 7px;
-    padding: 9.4vw 1.1vw 0.8vw;
+    padding: 156px 18px 14px;
   }
   .trend-content:last-child {
-  margin-right: 0px;
+    margin-right: 0px;
   }
   .trend-content-header {
     padding-left: 1.9vw;
@@ -1181,7 +1175,7 @@ body {
   .section:last-child {
     margin-bottom: 64px;
   }
-  .section-img {
+  .content-img {
     width: 49.6%;
     margin-right: 2rem;
   }
