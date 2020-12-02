@@ -1104,7 +1104,7 @@ body {
     line-height: 1.29em;
   }
   .content-container {
-    width: 94%;
+    max-width: 724px;
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -1181,7 +1181,7 @@ body {
     margin-top: 1.7rem;
   }
   .shop-section {
-    width: 94%;
+    max-width: 724px;
   }
   .products {
     flex-wrap: wrap;
@@ -1191,7 +1191,7 @@ body {
     width: 49%;
   }
   .footer {
-    width: 94%;
+    max-width: 724px;
   }
 }
 @media (min-width: 1201px) {
